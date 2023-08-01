@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Adamina&family=Roboto+Slab&display=swap');
+:root{
+  --primary-yellow: rgb(234, 227, 76);
+  --light-yellow: rgb(239, 242, 206);
+  --primary-red: rgb(239, 242, 206);
+  --primary-white: rgb(249, 249, 249);
+  --primary-white-60-o: rgba(249, 249, 249, 0.655);
+  --light-gray: rgb(241, 241, 244);
+  --primary-gray: rgb(221, 221, 221);
+  --primary-blue: rgb(169, 205, 247);
+  --primary-tan: rgb(244, 232, 188);
+  --light-tan: rgb(255, 249, 231);
+  --black: rgb(11, 10, 10);
+  --black-80-o: rgba(0, 0, 0, 0.8);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul, li{
+  font-family: 'Roboto Slab', serif;
+}
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+p, a{
+  font-family: 'Roboto Slab', serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.services-icons{
+  width: 30px;
+  height: auto;
+}
+.footer-links{
+  width: auto;
+  padding: 1px  ;
+  height: 37px;
+  border-radius: 15px;
+  margin: 0   5px;
+}
+.main-font{
+  font-family: 'Adamina', serif;
+}

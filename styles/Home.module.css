@@ -1,0 +1,179 @@
+.heroSection{
+  position: relative;
+  background-image: url('/image.JPG');
+  height: 644px;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+}
+.heroCard{
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  background-color: var(--black-80-o);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-white);
+}
+
+/*Section 3 */
+.section3{
+  position: relative;
+  display: flex;
+}
+.curveOne{
+  width: 100%;
+  height: 170px;
+  min-width: 1000px;
+  position: absolute;
+  top: 0;
+}
+.section3Image{
+  z-index: -1;
+  width: 60%;
+  height: 600px;
+  object-fit: cover;
+}
+.section3TextContainer{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section3bg{
+  z-index: -1;
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+@media screen and (max-width: 900px){
+  .section3{
+    display: grid;
+    height: 90vh;
+  }
+  .curveOne{
+    height: 100px;
+  }
+  .section3Image{
+    width: 100%;
+    height: 70vh;
+  }
+  .section3TextContainer{
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    bottom: 0;
+    padding: 20px 0px ;
+    width: 100%;
+    background-image: url('/bg/wave-haikei.png');
+    background-size:cover ;
+
+  }
+  .section3bg{
+    display: none;
+  }
+}
+
+
+/*Section 4 */
+.section4{
+  display: flex;
+  position: relative;
+}
+.section4bg{
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+.section4Image{
+  width: 60%;
+  height: 600px;
+  object-fit: cover;
+}
+.section4TextContainer{
+  width: 50%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 900px){
+  .section4{
+    display: grid;
+    height: 90vh;
+  }
+  .section4Image{
+    width: 100%;
+    height: 90vh;
+  }
+  .section4TextContainer{
+    background-image: url('/bg/wave-haikei-black.png');
+    background-size: cover;
+    background-position: left;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    justify-content: flex-start;
+    padding: 10px 0;
+  }
+  .section4bg{
+    display: none;
+  }
+}
+
+
+
+/*Section 5*/
+.section5{
+  position: relative;
+  display: flex;
+}
+.section5Image{
+  z-index: -1;
+  width: 60%;
+  height: 600px;
+  object-fit: cover;
+}
+.section5TextContainer{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section5bg{
+  z-index: -1;
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+@media screen and (max-width: 900px){
+  .section5{
+    display: grid;
+    height: 90vh;
+  }
+  .section5Image{
+    width: 100%;
+    height: 90vh;
+  }
+  .section5TextContainer{
+    position: absolute;
+    display: grid;
+    justify-content: flex-end;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px 0px ;
+    background-image: url('/bg/wave-haikei-2.png');
+    background-size:cover ;
+    background-position: right;
+
+  }
+  .section5bg{
+    display: none;
+  }
+}

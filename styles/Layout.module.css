@@ -1,0 +1,171 @@
+/* Navigation Menu */
+.navigationGrid{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  min-width: 1000px;
+  background-color: var(--primary-white);
+  padding: 10px 0;
+  border-radius: 0 0 25px 25px;
+
+}
+.navigationMenu{
+  display:flex ;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+.navigationLinksContainer{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.navigationLogoContainer{
+  display: flex;
+  justify-content: center;
+}
+.navigationLink{
+  padding: 0 15px;
+}
+@media screen and (min-width: 901px) {
+  .navigationMenuMobile{
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  .navigationGrid{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 0;
+    border-radius: 0;
+  }
+  .navigationLinksContainer,.navigationLogoContainer{
+    padding: 0 20px;
+  }
+  .navigationLink{
+    display: none;
+  }
+  .navigationLogoContainer a img{
+    width: 80px;
+    height: 80px;
+  }
+}
+.mobileNavigationLinks{
+  display: flex;
+  flex-direction: column;
+}
+.mobileNavigationLinks a{
+  margin-top: 14px;
+}
+/* Footer */
+.footer{
+  background-color: var(--primary-white);
+  padding: 50px 10px;
+}
+.footerGrid{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footerLogo{
+  padding: 5px;
+  border-radius: 15px;
+  width: 140px;
+  height: auto;
+}
+.footerLogo:hover{
+  background-color: var(--black-80-o);
+}
+.footerLinksContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 ;
+}
+.footerSocialsContainer{
+  display: flex;
+  flex-direction: row;
+}
+.facebookIcon{
+  color: #3b5998;
+}
+@media screen and (max-width: 750px) {
+  .footerLinksContainer{
+    grid-template-columns: repeat(3, 150px);
+  }
+}
+@media screen and (max-width: 580px) {
+  .footerLinksContainer{
+    grid-template-columns: repeat(2, 150px);
+  }
+}
+@media screen and (max-width: 375px) {
+  .footerLinksContainer{
+    grid-template-columns: repeat(1, 150px);
+  }
+}
+
+/*Previous Clients Section*/
+.previousClientsSection{
+  padding: 100px 20px;
+  background-color: var(--light-tan);
+}
+.clientsContainer{
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  grid-template-rows: auto;
+  row-gap: 25px;
+  column-gap: 50px;
+  justify-content: center;
+  padding:40px 0;
+}
+.clientImageContainer{
+  display: flex;
+  justify-content: center;
+}
+.clientImageContainer img{
+  height: 200px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 1400px) {
+  .clientsContainer{
+    grid-template-columns: repeat(auto-fill, 200px);
+  }
+}
+/*Services We Offer Section*/
+.servicesSection{
+  background-image: url('/stone-images/stone-wall-70-opacity.png');
+  background-size: cover;
+  padding: 100px 10px;
+}
+.servicesGrid{
+  display: grid;
+  grid-template-columns: repeat(4, 310px);
+  justify-content: center;
+  column-gap: 50px;
+  row-gap: 50px;
+}
+.servicesIcon{
+  position: relative;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: var(--primary-white-60-o);
+  box-shadow: 0px 1px 2px var(--black-80-o);
+}
+
+@media screen and (max-width: 1500px) {
+  .servicesGrid{
+    grid-template-columns: repeat(auto-fill, 310px);
+  }
+  
+}
