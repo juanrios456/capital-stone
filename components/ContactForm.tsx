@@ -167,18 +167,15 @@ return(
     </FormControl>
     <FormControl className={styles.item4} isRequired isInvalid={touched.project && !values.project}>
       <FormLabel>Project Type</FormLabel>
-        <InputGroup>
-        <InputLeftElement pointerEvents={'none'}>
-          <BsTools/>
-        </InputLeftElement>
-        <Input
-          type='text'
-          name='project'
-          value={values.project}
-          onChange={handleChange}
-          onBlur={onBlur}
-        />
-      </InputGroup>
+      <Select onChange={handleChange} onBlur={onBlur} name='project' placeholder='---'>
+          {
+            ['Stone', 'Block', 'Brick', 'Stucco'].map((option, index) =>{
+              return(
+                <option style={{color: 'var(--black)'}} key={index} value={option}>{option}</option>
+              )
+            })
+          }
+        </Select>
       <FormErrorMessage>Required</FormErrorMessage>
     </FormControl>
     <FormControl className={styles.item5} isRequired isInvalid={touched.details && !values.details}>
