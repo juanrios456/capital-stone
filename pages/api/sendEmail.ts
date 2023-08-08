@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 import WelcomeEmail from "../../email/welcome";
 
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.PROD_EMAIL_API_KEY);
 const EMAIL_FROM = process.env.EMAIL_FROM;
 const EMAIL_TO = process.env.EMAIL_TO;
 
