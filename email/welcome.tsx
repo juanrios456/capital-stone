@@ -19,7 +19,7 @@ interface EmailInfo {
 };
 
 
-export default function WelcomeEmail(props:EmailInfo){
+export default function WelcomeEmail(props:any){
   const {name, phone, details, project, email} = props
 return(
   <Html>
