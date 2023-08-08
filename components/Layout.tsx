@@ -152,6 +152,7 @@ export const ServicesDropDown = () => {
     </Menu>
   )
 }
+
 export function Footer(){
   return(
   <footer className={layoutStyles.footer}>
@@ -226,14 +227,15 @@ export function PreviousClients(){
             width={120}
             height={120}
             alt="Walmart logo, a trusted client"
+            data-aos='fade-up'
           />
         </span>
       )
   })
   return(
     <>
-    <div className={layoutStyles.previousClientsSection} id='clients'>
-      <Heading fontSize={'3xl'} fontFamily={'adamina'} py={5} textAlign={'center'}>Previous Clients / Partners</Heading>
+    <div className={layoutStyles.previousClientsSection} id='clients' >
+      <Heading fontSize={'3xl'} data-aos='fade-up' fontFamily={'adamina'} py={5} textAlign={'center'}>Previous Clients / Partners</Heading>
       <div className={layoutStyles.clientsContainer}>
         {imageFunction}
       </div>
@@ -244,8 +246,6 @@ export function PreviousClients(){
     </>
   )
 }
-
-
 
 export function ServicesWeOffer(){
   const cardsArray:ServicesCards =[
@@ -276,8 +276,8 @@ export function ServicesWeOffer(){
   ];
   const serivcesCards = cardsArray.map((cardItem) =>{
     return(
-  <Card backgroundColor={'var(--primary-white)'} key={cardItem.id}>
-    <CardHeader display={'flex'} alignItems={'center'} justifyContent={'space-between'}>
+  <Card data-aos='fade-up' backgroundColor={'var(--primary-white)'} key={cardItem.id}>
+    <CardHeader display={'flex'} pb={'0px'} justifyContent={'space-between'}>
         <Heading size='md' fontFamily={'Adamina'}>{cardItem.title}</Heading>
         <span className={layoutStyles.servicesIcon}><cardItem.icon/>
         </span>
@@ -295,7 +295,7 @@ export function ServicesWeOffer(){
   <>
     <div className={layoutStyles.servicesSection} id='services'>
       <div style={{ padding: '10px', display: 'flex', justifyContent: 'center'}}>
-        <Heading fontSize={'3xl'} fontFamily={'adamina'} textAlign={'center'} backgroundColor={'var(--primary-white-60-o)'} borderRadius={10} py={'5'} px={10} mb={'40px'}>Services Offered</Heading>
+        <Heading data-aos='fade-up' fontSize={'3xl'} fontFamily={'adamina'} textAlign={'center'} backgroundColor={'var(--primary-white-60-o)'} borderRadius={10} py={'5'} px={10} mb={'40px'}>Services Offered</Heading>
       </div>
   <IconContext.Provider value={{className: "services-icons"}}>
       <div className={layoutStyles.servicesGrid}>

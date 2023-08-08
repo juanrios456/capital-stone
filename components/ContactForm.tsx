@@ -8,9 +8,14 @@ import {
   FormErrorMessage,
   Button,
   Text,
+  Select,
+  InputLeftElement,
+  InputGroup,
   useToast,
 } from '@chakra-ui/react'
 import { useState } from 'react';
+import { BsTelephone,BsPerson } from 'react-icons/bs';
+import { AiOutlineMail } from 'react-icons/ai';
 import styles from '@/styles/contact.module.css'
 
 export interface ContactFormValues{
@@ -66,6 +71,7 @@ export function ContactForm(){
         [target.name]: target.value
     },
   }))
+  console.log(values)
 
 }
 
@@ -75,11 +81,13 @@ const onSubmit = async() =>{
     isLoading: true,
   }));
 
+
   try {
     await fetch('api/sendEmail',{
       method:'POST',
-      body: JSON.stringify(values)
-    });
+      body: JSON.stringify(values),
+      
+    })
     setTouched(touchedState);
     setState(initState);
     toast({
@@ -100,7 +108,7 @@ const onSubmit = async() =>{
 
 return(
 <div style={{padding: '110px 10px', backgroundColor: 'var(--black-80-o)', color: 'var(--primary-white)'}} id='contact'>
-  <Container className={styles.grid} >
+  <Container className={styles.grid} data-aos='fade-up'>
     <Heading className={styles.heading} fontFamily={'Adamina'} fontSize={'3xl'}>Contact Us!</Heading>
     {
       error && (
@@ -111,46 +119,63 @@ return(
     }
     <FormControl className={styles.item1} isRequired isInvalid={touched.name && !values.name}>
       <FormLabel>Full Name</FormLabel>
-      <Input
-        type='text'
-        name='name'
-        value={values.name}
-        onChange={handleChange}
-        onBlur={onBlur}
-      />
+      <InputGroup>
+        <InputLeftElement pointerEvents={'none'}>
+          <BsPerson/>
+        </InputLeftElement>
+        <Input
+          type='text'
+          name='name'
+          value={values.name}
+          onChange={handleChange}
+          onBlur={onBlur}
+        />
+      </InputGroup>
       <FormErrorMessage>Required</FormErrorMessage>
     </FormControl>
     <FormControl className={styles.item2} isRequired isInvalid={touched.phone && !values.phone}>
       <FormLabel>Phone Number</FormLabel>
-      <Input
-        type='number'
-        name='phone'
-        value={values.phone}
-        onChange={handleChange}
-        onBlur={onBlur}
-      />
+        <InputGroup>
+          <InputLeftElement pointerEvents='none'>
+            <BsTelephone  />
+          </InputLeftElement>
+            <Input
+              type='number'
+              name='phone'
+              value={values.phone}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+        </InputGroup>
       <FormErrorMessage>Required</FormErrorMessage>
     </FormControl>
     <FormControl className={styles.item3} isRequired isInvalid={touched.email && !values.email}>
       <FormLabel>Email</FormLabel>
-      <Input
-        type='text'
-        name='email'
-        value={values.email}
-        onChange={handleChange}
-        onBlur={onBlur}
-      />
+      <InputGroup>
+        <InputLeftElement pointerEvents={'none'}>
+          <AiOutlineMail/>
+        </InputLeftElement>
+        <Input
+          type='email'
+          name='email'
+          value={values.email}
+          onChange={handleChange}
+          onBlur={onBlur}
+        />
+      </InputGroup>
       <FormErrorMessage>Required</FormErrorMessage>
     </FormControl>
     <FormControl className={styles.item4} isRequired isInvalid={touched.project && !values.project}>
       <FormLabel>Project Type</FormLabel>
-      <Input
-        type='text'
-        name='project'
-        value={values.project}
-        onChange={handleChange}
-        onBlur={onBlur}
-      />
+        <Select onChange={handleChange} onBlur={onBlur} name='project' placeholder=''>
+          {
+            ['Stone', 'Block', 'Brick', 'Stucco'].map((option, index) =>{
+              return(
+                <option style={{color: 'var(--black)'}} key={index} value={option}>{option}</option>
+              )
+            })
+          }
+        </Select>
       <FormErrorMessage>Required</FormErrorMessage>
     </FormControl>
     <FormControl className={styles.item5} isRequired isInvalid={touched.details && !values.details}>
@@ -179,3 +204,13 @@ return(
 </div>
 );
 }
+
+//Old Input
+
+//<Input
+//  type='text'
+//  name='project'
+//  value={values.project}
+//  onChange={handleChange}
+//  onBlur={onBlur}
+///>
