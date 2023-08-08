@@ -19,12 +19,12 @@ interface EmailInfo {
 };
 
 
-export default function WelcomeEmail(props:any){
+export default function WelcomeEmail(props:EmailInfo){
   const {name, phone, details, project, email} = props
 return(
   <Html>
     <Head />
-    <Preview>Open to view Information Recieved</Preview>
+    <Preview>Log in with this magic link</Preview>
     <Body style={main}>
       <Container style={{...container, }}>
         <Heading style={{...h1, textAlign: 'center'}}>New Contact Form Filled From <br/>captialstonellc.com</Heading>
