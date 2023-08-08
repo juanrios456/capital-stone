@@ -167,7 +167,7 @@ return(
     </FormControl>
     <FormControl className={styles.item4} isRequired isInvalid={touched.project && !values.project}>
       <FormLabel>Project Type</FormLabel>
-        <Select onChange={handleChange} onBlur={onBlur} name='project' placeholder=''>
+        <Select onChange={handleChange} onBlur={onBlur} name='project' placeholder='---'>
           {
             ['Stone', 'Block', 'Brick', 'Stucco'].map((option, index) =>{
               return(
