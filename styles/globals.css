@@ -2,7 +2,7 @@
 :root{
   --primary-yellow: rgb(234, 227, 76);
   --light-yellow: rgb(239, 242, 206);
-  --primary-red: rgb(239, 242, 206);
+  --white-100-o: rgba(255, 255, 255, 0);
   --primary-white: rgb(249, 249, 249);
   --primary-white-60-o: rgba(249, 249, 249, 0.655);
   --light-gray: rgb(241, 241, 244);

@@ -142,11 +142,23 @@
     grid-template-columns: repeat(auto-fill, 200px);
   }
 }
+
+
+
 /*Services We Offer Section*/
 .servicesSection{
   background-image: url('/stone-images/stone-wall-70-opacity.png');
   background-size: cover;
   padding: 100px 10px;
+  position: relative;
+}
+.servicesCurve{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-width: 1000px;
+  height: 100px;
 }
 .servicesGrid{
   display: grid;

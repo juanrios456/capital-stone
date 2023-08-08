@@ -93,6 +93,14 @@
   height: 600px;
   object-fit: cover;
 }
+.curveTwo{
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  min-width: 1000px;
+  height: 170px;
+  z-index: 1;
+}
 .section4TextContainer{
   width: 50%;
   z-index: 1;
@@ -104,6 +112,9 @@
   .section4{
     display: grid;
     height: 90vh;
+  }
+  .curveTwo{
+    height: 100px;
   }
   .section4Image{
     width: 100%;
@@ -138,6 +149,13 @@
   height: 600px;
   object-fit: cover;
 }
+.curveThree{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-width: 1000px;
+  height: 170px;
+}
 .section5TextContainer{
   position: relative;
   display: flex;
@@ -155,6 +173,9 @@
   .section5{
     display: grid;
     height: 90vh;
+  }
+  .curveThree{
+    height: 100px;
   }
   .section5Image{
     width: 100%;
