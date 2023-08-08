@@ -50,6 +50,7 @@ export function NavigationMenu(){
         <Link href="/" >
           <Image src='/logo.png'
             alt="Capital Stone Main Logo"
+            title='Link that takes you to the front page.'
             width={100}
             height={100}
             />
@@ -163,8 +164,8 @@ export function Footer(){
           width={150}
           height={150}
           className={layoutStyles.footerLogo}
-          alt='Logo that takes you to the home page.'
-          title='Logo that takes you to the home page.'
+          alt='Capital Stone Main Logo'
+          title='link that takes you to the home page.'
         />
         </Link>
       </div>
@@ -200,22 +201,27 @@ export function PreviousClients(){
   let imageArray= [
     {
       name: 'Hilton.png',
+      alt: 'Hilton Garden Inn hotels logo',
       id: 1,
     },
     {
       name: 'kansascom.png',
+      alt: 'Kansas health science center logo',
       id: 2,
     },
     {
       name: 'mcdonalds.jpg',
+      alt: 'mcdonalds logo',
       id: 3,
     },
     {
       name: 'subway.png',
+      alt: 'subway sandwiches logo',
       id: 4,
     },
     {
       name: 'walmart.png',
+      alt: 'walmart logo',
       id: 5,
     }
   ];
@@ -226,7 +232,7 @@ export function PreviousClients(){
           <Image src={`/previous-client-logos/${image.name}`}
             width={120}
             height={120}
-            alt="Walmart logo, a trusted client"
+            alt={image.alt}
             data-aos='fade-up'
           />
         </span>
@@ -276,33 +282,40 @@ export function ServicesWeOffer(){
   ];
   const serivcesCards = cardsArray.map((cardItem) =>{
     return(
-  <Card data-aos='fade-up' backgroundColor={'var(--primary-white)'} key={cardItem.id}>
-    <CardHeader display={'flex'} pb={'0px'} justifyContent={'space-between'}>
-        <Heading size='md' fontFamily={'Adamina'}>{cardItem.title}</Heading>
-        <span className={layoutStyles.servicesIcon}><cardItem.icon/>
-        </span>
-      
-    </CardHeader>
-    <Divider />
-    <CardBody>
-      <Text>{cardItem.body}</Text>
-    </CardBody>
-  </Card>
+      <Card data-aos='fade-up' backgroundColor={'var(--primary-white)'} key={cardItem.id}>
+        <CardHeader display={'flex'} pb={'0px'} justifyContent={'space-between'}>
+            <Heading size='md' fontFamily={'Adamina'}>{cardItem.title}</Heading>
+            <span className={layoutStyles.servicesIcon}><cardItem.icon/>
+            </span>
+          
+        </CardHeader>
+        <Divider />
+        <CardBody>
+          <Text>{cardItem.body}</Text>
+        </CardBody>
+      </Card>
     )
   })
 
   return(
-  <>
-    <div className={layoutStyles.servicesSection} id='services'>
-      <div style={{ padding: '10px', display: 'flex', justifyContent: 'center'}}>
-        <Heading data-aos='fade-up' fontSize={'3xl'} fontFamily={'adamina'} textAlign={'center'} backgroundColor={'var(--primary-white-60-o)'} borderRadius={10} py={'5'} px={10} mb={'40px'}>Services Offered</Heading>
+    <>
+      <div className={layoutStyles.servicesSection} id='services'>
+        <Image src='/curves/curve-4.png'
+          width={1440}
+          height={170}
+          alt="background curve"
+          quality={'100'}
+          className={layoutStyles.servicesCurve}
+        />
+        <div style={{ padding: '10px', display: 'flex', justifyContent: 'center',}}>
+          <Heading data-aos='fade-up' fontSize={'3xl'} fontFamily={'adamina'} zIndex={'1'} textAlign={'center'} backgroundColor={'var(--primary-white-60-o)'} borderRadius={10} py={'5'} px={10} mb={'40px'}>Services Offered</Heading>
+        </div>
+        <IconContext.Provider value={{className: "services-icons"}}>
+        <div className={layoutStyles.servicesGrid}>
+          {serivcesCards}
+        </div>
+        </IconContext.Provider>
       </div>
-  <IconContext.Provider value={{className: "services-icons"}}>
-      <div className={layoutStyles.servicesGrid}>
-        {serivcesCards}
-      </div>
-  </IconContext.Provider>
-    </div>
-  </>
+    </>
   )
 }
