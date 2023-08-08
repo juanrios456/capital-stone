@@ -1,28 +1,26 @@
 import {
   Body,
-  Column,
-  Container,
+    Container,
   Head,
   Heading,
   Html,
-  Img,
-  Link,
   Preview,
   Section,
   Text,
 } from '@react-email/components';
 import * as React from 'react';
 
-type EmailInfo = {
-  name: string,
-  phone: string,
-  email: string,
-  details: string,
-  project: string,
-}
+interface EmailInfo {
+  name: string;
+  phone: string;
+  email: string;
+  details: string;
+  project: string;
+};
 
 
-export default function WelcomeEmail({name, phone, email, details, project}:EmailInfo){
+export default function WelcomeEmail(props:EmailInfo){
+  const {name, phone, details, project, email} = props
 return(
   <Html>
     <Head />
@@ -35,7 +33,7 @@ return(
               Name:
             </Text>
             <Text style={{...text, ...contactInfo}}>
-              Full Name
+              {name}
             </Text>
         </Section>  
         <Section style={formInfo}>
@@ -43,7 +41,7 @@ return(
               Phone Number:
             </Text>
             <Text style={{ ...text, ...contactInfo}}>
-              Phone Nujmba
+              {phone}
             </Text>
         </Section>  
         <Section style={formInfo}>
@@ -51,7 +49,7 @@ return(
               Email:
             </Text>
             <Text style={{ ...text, ...contactInfo}}>
-              Email
+              {email}
             </Text>
         </Section>  
         <Section style={formInfo}>
@@ -59,7 +57,7 @@ return(
               Project Type:
             </Text>
             <Text style={{ ...text, ...contactInfo}}>
-              Type
+              {project}
             </Text>
         </Section>  
         <Section style={formInfo}>
@@ -67,7 +65,7 @@ return(
               Project Details:
             </Text>
             <Text style={{ ...text, ...contactInfo}}>
-              Extra Details 
+              {details}
             </Text>
         </Section>  
       </Container>
@@ -78,19 +76,19 @@ return(
 
 const contactInfo = {
   marginTop: '0px',
-}
+};
 
 const infoType = {
   fontSize: '20px',
   margin: '0',
   borderBottom: '1px solid rgba(0,0,0,0.8)',
-}
+};
 
 const formInfo = {
   backgroundColor: 'rgb(241,241,244)',
   marginBottom: '10px',
   padding: '3px 10px',
-}
+};
 
 const main = {
   backgroundColor: 'rgb(249, 249, 249)',
@@ -119,24 +117,4 @@ const text = {
     "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
   fontSize: '14px',
   margin: '0',
-};
-
-const footer = {
-  color: '#898989',
-  fontFamily:
-    "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
-  fontSize: '12px',
-  lineHeight: '22px',
-  marginTop: '12px',
-  marginBottom: '24px',
-};
-
-const code = {
-  display: 'inline-block',
-  padding: '16px 4.5%',
-  width: '90.5%',
-  backgroundColor: '#f4f4f4',
-  borderRadius: '5px',
-  border: '1px solid #eee',
-  color: '#333',
 };
