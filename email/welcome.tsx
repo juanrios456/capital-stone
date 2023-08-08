@@ -24,7 +24,7 @@ export default function WelcomeEmail(props:EmailInfo){
 return(
   <Html>
     <Head />
-    <Preview>Log in with this magic link</Preview>
+    <Preview>Open to view Information Recieved</Preview>
     <Body style={main}>
       <Container style={{...container, }}>
         <Heading style={{...h1, textAlign: 'center'}}>New Contact Form Filled From <br/>captialstonellc.com</Heading>
