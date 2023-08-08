@@ -14,7 +14,7 @@ import {
   useToast,
 } from '@chakra-ui/react'
 import { useState } from 'react';
-import { BsTelephone,BsPerson } from 'react-icons/bs';
+import { BsTelephone,BsPerson,BsTools } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
 import styles from '@/styles/contact.module.css'
 
@@ -71,7 +71,6 @@ export function ContactForm(){
         [target.name]: target.value
     },
   }))
-  console.log(values)
 
 }
 
@@ -166,16 +165,19 @@ return(
       <FormErrorMessage>Required</FormErrorMessage>
     </FormControl>
     <FormControl className={styles.item4} isRequired isInvalid={touched.project && !values.project}>
-      <FormLabel>Project Type</FormLabel>
-        <Select onChange={handleChange} onBlur={onBlur} name='project' placeholder='---'>
-          {
-            ['Stone', 'Block', 'Brick', 'Stucco'].map((option, index) =>{
-              return(
-                <option style={{color: 'var(--black)'}} key={index} value={option}>{option}</option>
-              )
-            })
-          }
-        </Select>
+      <FormLabel>Project Type: (stucco, stone, bricks, blocks)</FormLabel>
+      <InputGroup>
+        <InputLeftElement pointerEvents={'none'}>
+          <BsTools/>
+        </InputLeftElement>
+        <Input
+          type='text'
+          name='project'
+          value={values.project}
+          onChange={handleChange}
+          onBlur={onBlur}
+        />
+      </InputGroup>
       <FormErrorMessage>Required</FormErrorMessage>
     </FormControl>
     <FormControl className={styles.item5} isRequired isInvalid={touched.details && !values.details}>
@@ -204,13 +206,3 @@ return(
 </div>
 );
 }
-
-//Old Input
-
-//<Input
-//  type='text'
-//  name='project'
-//  value={values.project}
-//  onChange={handleChange}
-//  onBlur={onBlur}
-///>
