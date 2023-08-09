@@ -79,7 +79,7 @@ export function Section3(){
             quality={'100'}
             className={styles.curveOne}
           />
-            <Image src='/stone-images/IMG-3313.jpg'
+            <Image src='/stone-images/IMG_1793.JPG'
               width={600}
               height={600}
               alt="image one"
@@ -110,7 +110,7 @@ export function Section4(){
     <div className={styles.section4}>
       <div className={styles.section4TextContainer}>
         <Container data-aos='fade-up' color={'white'}>
-          <Heading fontFamily={'adamina'} fontSize={'3xl'} textAlign={'center'} py={5}>Stucco Specialty</Heading>
+          <Heading fontFamily={'adamina'} fontSize={'3xl'} textAlign={'center'} py={5}>Stucco Specialists</Heading>
           <List>
             <NewListCreator sectionName='Stucco' list={stuccoList}/>
           </List>
@@ -150,7 +150,7 @@ export function Section5(){
         quality={'100'}
         className={styles.curveThree}
       />
-      <Image src='/Brick-Block/IMG-3314.jpg'
+      <Image src='/Brick-Block/IMG-3181.jpg'
         width={600}
         height={600}
         data-aos='fade-up'
