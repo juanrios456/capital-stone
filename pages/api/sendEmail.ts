@@ -16,7 +16,7 @@ export default async (req:NextApiRequest, res:NextApiResponse) =>{
     try {
       const data = await resend.emails.send({
         from: 'Website <email@capitalstonellc.com>',
-        to: ['juanriis456@gmail.com'],
+        to: ['juanriis456@gmail.com','alejorios16@gmail.com],
         subject: `New Contact Form Recieved`,
         react: WelcomeEmail( parsedValues ),
       });
