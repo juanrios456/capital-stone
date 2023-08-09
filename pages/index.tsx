@@ -79,7 +79,7 @@ export function Section3(){
             quality={'100'}
             className={styles.curveOne}
           />
-            <Image src='/image.JPG'
+            <Image src='/stone-images/IMG-3313.jpg'
               width={600}
               height={600}
               alt="image one"
