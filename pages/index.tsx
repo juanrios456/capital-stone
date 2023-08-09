@@ -150,7 +150,7 @@ export function Section5(){
         quality={'100'}
         className={styles.curveThree}
       />
-      <Image src='/image.JPG'
+      <Image src='/Brick-Block/IMG-3314.jpg'
         width={600}
         height={600}
         data-aos='fade-up'
