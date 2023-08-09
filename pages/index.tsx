@@ -165,7 +165,7 @@ export function Section5(){
       />
       <div className={styles.section5TextContainer}>
         <Container data-aos='fade-up'>
-          <Heading fontFamily={'adamina'} fontSize={'3xl'} textAlign={'center'} py={5}>Brick Projects</Heading>
+          <Heading fontFamily={'adamina'} fontSize={'3xl'} textAlign={'center'} py={5}>Brick and Block Projects</Heading>
           <List>
             <NewListCreator sectionName='Brick' list={brickList}/>
           </List>
