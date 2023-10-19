@@ -15,3 +15,4 @@ pnpm dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 This is a Website for capitalstonellc.com
+Here you may find examples of work, services and methods of contact for Capital Stone
